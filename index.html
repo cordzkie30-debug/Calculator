@@ -3,21 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculator Home</title>
+  <title>Monthly Calculator</title>
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
   <main class="hero">
-    <h1>Calculator Home</h1>
+    <h1>Monthly Payment Calculator</h1>
 
     <div class="top-links">
       <a href="yearly.html">Yearly</a>
-      <a href="monthly.html">Monthly</a>
+      <a href="index.html">Monthly</a>
       <a href="pesotodollor.html">Dollar to Peso</a>
     </div>
 
     <section class="form-card single-card">
-      <p class="result">Choose a calculator above.</p>
+      <label>Loan Amount / Principal (PHP)</label>
+      <input type="number" id="monthlyPrincipal" placeholder="e.g. 100000" />
+
+      <label>Annual Interest Rate (%)</label>
+      <input type="number" id="monthlyRate" placeholder="e.g. 10" />
+
+      <label>Months</label>
+      <input type="number" id="monthlyMonths" placeholder="e.g. 24" />
+
+      <button onclick="calculateMonthly()">Calculate Monthly Payment</button>
+      <p id="monthlyResult" class="result">Results:</p>
     </section>
   </main>
 
